@@ -78,18 +78,39 @@ print(type(diccionario))
 
 #Ejercicio
 
-""" 
-Crear una variable de apellido con un valor
-Crear una variable de nombres con un valor
-Crear una variable de edad con un valor
-Crear una variable de ciudad con un valor
-Crear una variable de pais con un valor
 
-Crear una variable de ciudades con varios valores 
-Crear una variable de paises con varios valores
-Crear una variable de colores con varios valores
+#Crear una variable de apellido con un valor
+lastname = "Sanabria"
 
-Crear una variable de ciudades y paises con varios valores
-Crear una variable de colores con nombre y tonalidad
+#Crear una variable de nombres con un valor
+names = ["Delvis", "Hugo", "Jesus", "Alejandro"]
 
-"""
+#Crear una variable de edad con un valor
+age = 24
+
+#Crear una variable de ciudad con un valor
+city = "Css"
+
+#Crear una variable de pais con un valor
+country = "Venezuela"
+
+#Crear una variable de ciudades con varios valores 
+cities = ["Css", "Valencia", "Maracaibo"]
+
+#Crear una variable de paises con varios valores
+countries = ["Venezuela", "Colombia", "Brasil"]
+
+#Crear una variable de colores con varios valores
+colors = {"red": "#FF0000", "green": "#00FF00", "blue": "#0000FF"}
+
+#Crear una variable de ciudades y paises con varios valores
+citiesAndCountries = {"Venezuela": "Caracas", "España": "Barcelona", "Colombia ": "Bogota"}
+citiesAndCountries = [
+    {"country": "Venezuela", "city": "Caracas"},
+    {"country": "España", "city": "Barcelona"},
+    {"country": "Colombia", "city": "Bogota"},
+]
+
+#Crear una variable de colores con nombre y tonalidad
+
+colors = {"red":"tone: #FF0000","green":"tone: #00FF00","blue":"tone: #0000FF"}
