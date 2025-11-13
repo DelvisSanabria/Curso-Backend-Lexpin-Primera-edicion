@@ -49,4 +49,3 @@ Ejercicio 5 (En rango): Escribe una expresión que verifique si b está entre 0 
   result5 = (b >= 0) and (b <= 10)
   print("Operacion and: ", result5)
 """
-
