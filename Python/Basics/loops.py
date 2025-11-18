@@ -94,14 +94,48 @@ for number in range(1, n + 1):
 #    - Si es incorrecta, muestra "Contraseña incorrecta. Intentos restantes: X".
 #    - Si se agotan los intentos, muestra "¡Cuenta bloqueada!".
 
+password = "python123"
+attents = 3
 
+print("Bienvenido al sistema de validacion")
+while attents > 0:
+  userInput = input("Ingresa tu contraseña: ") # type: ignore
+  if userInput == password:
+    print("¡Acceso concedido!")
+    break
+  else:
+    attents -=1
+    print(f"Contraseña incorrecta. Intentos restantes: {attents}")
+if attents == 0:
+  print("¡Cuenta bloqueada!")
 
 #Ejercicio 3
 # Enunciado:  
-# Pide al usuario 5 números enteros. Usando un bucle `for` y `match-case`:
+# Pide al usuario 5 números enteros, usando un bucle `for` y `match-case`:
 # 1. Clasifica cada número en:
 #    -"Pequeño" si es menor que 10.
 #    -"Mediano" si está entre 10 y 50.
 #    -"Grande" si es mayor que 50.
 #    -"Cero" si es 0.
 # 2. Al final, muestra cuántos números hubo en cada categoría.
+
+pequeno = mediano = grande = cero = 0
+  
+  
+for _ in range(5):
+  num = int(input("ingresa un numero: "))
+  match num:
+    case 0:
+      cero += 1
+    case n if n < 10:
+      pequeno +=1
+    case n if 10 <= n <=50:
+      mediano +=1
+    case _:
+      grande +=1
+
+print("Resultados:")
+print("Pequeno: ", pequeno)
+print("Mediano: ", mediano)
+print("Grande: ", grande)
+print("Cero: ", cero)
