@@ -108,5 +108,27 @@ car.info()
 
 bike = Motocicleta("Honda", "CB750", 1970)
 bike.info()
+
+#mostrar atributos en forma de diccionario
+
+carDictionary = car.__dict__
+print(carDictionary)
         
         
+#Extender la funcionalidad de una clase existente sin modificar su codigo fuente
+#Utilizando la funcion "super()" podemos llamar a los metodos de la clase padre desde la clase hija
+
+class ElectricCar(Coche):
+    def __init__(self, brand, model, year, battery_capacity):
+        super().__init__(brand, model, year)
+        self.battery_capacity = battery_capacity
+        
+    def info(self):
+        super().info()
+        print(f"Capacidad de la bateria: {self.battery_capacity} kWh")
+    def charge(self):
+        print(f"Cargando el coche {self.brand} {self.model}...")
+        
+electric_car = ElectricCar("Tesla", "Model S", 2022, 100)
+electric_car.info()
+electric_car.charge()
