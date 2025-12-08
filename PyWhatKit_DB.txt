@@ -1,0 +1,25 @@
+Date: 8/12/2025
+Time: 18:27
+Phone Number: +584129240174
+Message: Hola Jesus desde python
+--------------------
+Date: 8/12/2025
+Time: 18:31
+Group ID: Iv1YpX94pkJBv2IkUt6FLD
+Message: Hola Grupo desde python
+--------------------
+Date: 8/12/2025
+Time: 18:32
+Group ID: Iv1YpX94pkJBv2IkUt6FLD
+Message: Hola Grupo desde python
+--------------------
+Date: 8/12/2025
+Time: 18:43
+Phone Number: +584129240174
+Message: Hola Jesus desde python a una hora especifica
+--------------------
+Date: 8/12/2025
+Time: 18:47
+Group ID: Iv1YpX94pkJBv2IkUt6FLD
+Message: Hola Grupo desde python a una hora especifica
+--------------------
