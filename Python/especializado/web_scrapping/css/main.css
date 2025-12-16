@@ -1,0 +1,30 @@
+/* Esto es un comentario */
+/* Tendremos selectores de etiquetas, que nos sirven para seleccionar todas las etiquetas de un tipo especifico */
+p{
+  font-size: 5rem;
+}
+
+nav{
+  background-color: #ce14bf;
+}
+
+/* Tendremos atributos de clases que nos sirven para aplicar estilos a elementos que compartan una clase */
+
+.my-class{
+  color: aquamarine;
+}
+
+/* Tendremos atributos de id que nos sirven para aplicar estilos a elementos que compartan un id */
+
+#my-id{
+  color: #ef0000;
+}
+
+/* Tendremos selectores descendentes que nos sirven para aplicar estilos a todos los elementos que cumplan la condicion */
+aside h2{
+  color: bisque;
+}
+
+ul > li{
+  list-style-type: square;
+}
