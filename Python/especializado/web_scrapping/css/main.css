@@ -28,3 +28,23 @@ aside h2{
 ul > li{
   list-style-type: square;
 }
+
+/* Tendremos los selectores de atributos que nos sirven para aplicar estilos a todos los elementos que cumplan la condicion */
+
+input[type="text"]{
+  background-color: #ef0000;
+}
+
+/* Tendremos los selectores de pseudoclases que nos sirven para aplicar estilos a los elementos cuando esten en un
+estado especifico */
+
+aside:hover{
+  background-color: #3c37a3;
+  font-size: large;
+}
+
+/* Tendremos los selectores de pseudoelementos que nos sirven para aplicar estilos a los elementos o alguna parte concreta de ellos */
+p::first-letter{
+  font-size: 5rem;
+  color: #3c37a3;
+}
