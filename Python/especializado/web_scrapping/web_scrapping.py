@@ -46,8 +46,34 @@ scrapper titular y descripcion especificada en WhatsApp de la pagina: https://wu
 y mostrarlo por consola
 """
 
-url = "https://wuau.marketing/"
-response = requests.get(url)
-soup = bs(response.text, "html.parser")
+from playwright.sync_api import sync_playwright
 
-print(soup.prettify())
+def scrape_wau_page():
+  with sync_playwright() as playwright:
+    browser = playwright.chromium.launch(headless=True)
+    page = browser.new_page()
+    
+    #Debemos decirle a que direccion va a ir esta pagina
+    page.goto("https://wuau.marketing/")
+    
+    #necesitamos que la pagina espere y seleccione las etiquetas que necesitamos
+    
+    page.wait_for_selector('section')
+    
+    #selecciono las etiquetas
+    sections = page.query_selector_all('section')
+    
+    #debo recorrer cada una de las secciones y seleccionar titulo y descripcion
+    for section in sections:
+      title = section.query_selector('h3')
+      description = section.query_selector('p')
+      
+      if title and description:
+        print(f"Título: {title.text_content()}")
+        print(f"Descripción: {description.text_content()}")
+        print("\n")
+    
+    browser.close()
+    #Debemos obtener el texto de las etiquetas
+  
+scrape_wau_page()
