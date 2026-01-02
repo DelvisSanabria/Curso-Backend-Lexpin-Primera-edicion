@@ -26,7 +26,7 @@ def fetch_weather_for_city(city: str) -> Dict[str, Any]:
     geocode_url = "https://geocoding-api.open-meteo.com/v1/search"
     params = {"name": city, "count": 1, "language": "en", "format": "json"}
     request = requests.get(geocode_url, params=params)
-    request.raise_for_status() # type: ignore
+    requests.raise_for_status() # type: ignore
     data = request.json()
     
     #Comprobamos si la ciudad existe
