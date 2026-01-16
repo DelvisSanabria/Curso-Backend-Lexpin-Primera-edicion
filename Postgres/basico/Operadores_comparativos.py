@@ -53,3 +53,23 @@ results_less_than_or_equal = db_manager.execute_custom_query("SELECT * FROM cont
 results_like = db_manager.execute_custom_query("SELECT * FROM contacts WHERE nombre LIKE %s", ('%lv%',))
 
 results_like = db_manager.execute_custom_query("SELECT * FROM contacts WHERE nombre LIKE '______'")
+
+#8. IN ()
+
+#Selecciona registros donde el valor de una columna coincide con uno de varios valores,. especificados en una lista.
+
+results_in = db_manager.execute_custom_query("SELECT * FROM contacts WHERE nombre IN ('Delvis', 'Alejandro')")
+
+#9. BETWEEN 
+
+#Selecciona registros donde el valor de una columna está dentro de un rango específico.
+
+results_between = db_manager.execute_custom_query("SELECT * FROM contacts WHERE id BETWEEN 1 AND 3")
+
+#10. IS NULL / IS NOT NULL
+
+#Selecciona registros donde el valor de una columna es NULL o no es NULL.
+
+results_is_null = db_manager.execute_custom_query("SELECT * FROM contacts WHERE email IS NULL")
+
+results_is_not_null = db_manager.execute_custom_query("SELECT * FROM contacts WHERE email IS NOT NULL")
