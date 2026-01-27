@@ -1,7 +1,10 @@
 from django.http import HttpResponse
 from .models import Task
 from django.shortcuts import render, redirect
-
+from rest_framework import viewsets, generics
+from .serializers import TaskSerializer, UserSerializer
+from django.contrib.auth.models import User
+from rest_framework.permissions import AllowAny, IsAuthenticated
 # Create your views here.
 
 def home(request):
@@ -35,3 +38,19 @@ def create_task(request):
     return redirect('task_list')
   else: 
     return render(request, 'tasks/create_task.html')
+  
+#Vistas con DRF
+
+class TaskViewSet(viewsets.ModelViewSet):
+  queryset = Task.objects.all()
+  serializer_class = TaskSerializer
+  permission_classes = [IsAuthenticated]
+  
+#vista para registrar usuarios
+class RegisterViewSet(generics.CreateAPIView):
+  queryset = User.objects.all()
+  
+  permission_classes = [AllowAny]
+  
+  serializer_class = UserSerializer
+  
