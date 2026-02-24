@@ -1,0 +1,1 @@
+console.timeEnd("Tiempo de ejecución");

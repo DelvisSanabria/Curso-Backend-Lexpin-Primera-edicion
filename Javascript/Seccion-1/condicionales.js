@@ -59,3 +59,59 @@ if (number > number2) {
 } else {
     console.log(number + " es igual que " + number2);
 }
+
+//Operador ternario (Condicional ternario) forma abreviada de escribir una expresion condicional
+
+/* Cuya estructura es la siguiente: 
+condicion ? valor si es verdadera : valor si es falsa
+*/
+
+
+let result = (number > number2) ? number + " es mayor que " + number2  : number + " es menor que " + number2
+
+
+console.log(result);
+
+//Switch (Seleccion) nos permoite ejecutar un bloque de codigo basandonos en casos.
+
+/* Cuya estructura es la siguiente:
+switch (expresion) {
+    case valor1:
+        //codigo a ejecutar si la expresion es igual al valor1
+        break;  //se utiliza para salir del switch
+    case valor2:                    
+        //codigo a ejecutar si la expresion es igual al valor2
+        break;
+    default:
+        //codigo a ejecutar si la expresion no es igual a ninguno de los casos anteriores
+}
+*/
+
+let day = question("Ingrese un dia de la semana: ");
+
+switch(day.toLowerCase()) {
+    case "lunes":
+        console.log("Hoy es lunes");
+        break;
+    case "martes":
+        console.log("Hoy es martes");
+        break;
+    case "miercoles":
+        console.log("Hoy es miercoles");
+        break;
+    case "jueves":
+        console.log("Hoy es jueves");
+        break;
+    case "viernes":
+        console.log("Hoy es viernes");
+        break;
+    case "sabado":
+        console.log("Hoy es sabado");
+        break;
+    case "domingo":
+        console.log("Hoy es domingo");
+        break;
+    default:
+        console.log("No es un dia de la semana");
+        break;
+}
