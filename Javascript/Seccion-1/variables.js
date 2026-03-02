@@ -60,3 +60,18 @@ let num1 = +prompt("Ingrese un numero:");
 let num2 = +prompt("Ingrese otro numero:");
 
 alert("La suma de " + num1 + " y " + num2 + " es: " + (num1 + num2));
+
+/* 
+    EJERCICIO PARA PRACTICAR
+    Realiza un programa que calcule el IMC de una persona. 
+*/
+
+// Utilizando question, y variables let y constantes.
+// Formula del IMC: peso / (altura * altura)
+
+import {question} from "readline-sync"
+
+let peso = parseFloat(question("Ingrese su peso en kilogramos: "));
+let altura = parseFloat(question("Ingrese su altura en metros: "));
+let imc = peso / (altura * altura);
+console.log("Su IMC es: " + imc.toFixed(2));

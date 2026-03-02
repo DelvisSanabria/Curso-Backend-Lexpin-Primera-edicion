@@ -115,3 +115,84 @@ switch(day.toLowerCase()) {
         console.log("No es un dia de la semana");
         break;
 }
+
+/*
+    Realiza un menu que permita elegir que clase de producto se desea comprar, y en base a la eleccion del usuario mostrar
+    el producto que selecciono.
+
+    El menu debe contener 8 productos diferentes y en caso de seleccionar un producto que no se muestre en la lista
+    indicar que no se encuentra disponible.
+
+    Utilizar: question y switch, No se deben utilizar variables.
+*/
+
+
+/* 
+    Extension 1 del ejercicio anterior, utilizando el mismo menú mostrar 3 o 4 opciones de cada tipo de producto.
+*/
+
+/* ACTIVIDAD - Juego del semaforo.
+
+    Crea un mensaje en pantalla que muestre 3 colores a elegir: 
+    VERDE, AMARILLO, ROJO.
+    Guarda la respuesta en una variable llamada color.
+
+    Ejemplo: Elige un color para iniciar:
+    1) VERDE
+    2) AMARILLO
+    3) ROJO
+    OTRO) Opcion invalida
+
+
+    Luego crea otro mensaje en pantalla que muestre una situacion con el color ingresado previamente
+    y 3 opciones a elegir: Pasar normalmente, Acelerar y Esperar.
+    Guarda la respuesta en una variable llamada accion.
+
+    Ejemplo: 
+        - El semaforo esta de color ROJO, ¿Que desea hacer?
+        1) Pasar normalmente
+        2) Acelerar
+        3) Esperar
+        OTRO) Opcion invalida
+
+
+    Luego crea la logica con Switch-Case que evalue las respuestas ingresadas en la consola
+    y en base a ello inicie un caso.
+
+
+    Si la luz es VERDE evaluar:
+    - Si el jugador pasa normalmente:
+        mostrar un mensaje que diga: Bien hecho!, pasaste en el momento adecuado ✅, ¡Has ganado! 😁
+    - Sino, Si el jugador acelera:
+        mostrar un mensaje que diga: Oh no!, Aceleraste demasiado y chocaste 💥, ¡Has perdido! 😞
+    - Sino, Si el jugador espera:
+        mostrar un mensaje que diga: Oh no!, Creaste un bloqueo y los demas conductores estan furiosos 🤬, ¡Has Perdido! ❌
+    - De lo contrario
+        mostrar un mensaje que diga: Respuesta invalida.
+    
+    
+    Si la luz es AMARILLO evaluar:
+    - Si el jugador pasa normalmente:
+        mostrar un mensaje que diga: Oh no!, No aceleraste lo suficiente y te han chocado 💥, ¡Has perdido! ❌
+    - Sino, Si el jugador acelera:
+        mostrar un mensaje que diga: Bien hecho!, pasaste en el momento justo ✅, ¡Has ganado! 😁
+    - Sino, Si el jugador espera:
+        mostrar un mensaje que diga: Oh no!, Creaste un bloqueo y los demas conductores estan furiosos 🤬, ¡Has Perdido! 😞
+    - De lo contrario
+        mostrar un mensaje que diga: Respuesta invalida.
+
+
+    Si la luz es ROJO evaluar:
+    - Si el jugador pasa normalmente:
+        mostrar un mensaje que diga: Oh no!, Pasaste en el momento indebido ❌, ¡Has perdido! 😞
+    - Sino, Si el jugador acelera:
+        mostrar un mensaje que diga: Oh no!, Crusaste mientras autos en otra direccion pasaban y chocaste 💥, ¡Has Perdido! ❌
+    - Sino, Si el jugador espera:
+        mostrar un mensaje que diga: Bien hecho!, Esperaste en el momento adecuado ✅, ¡Has ganado! 😁
+    - De lo contrario
+        mostrar un mensaje que diga: Respuesta invalida.
+
+
+    PISTA: en algun momento necesitaras usar if-else y el operador AND/&&
+    PISTA 2: Para los mensajes de retorno puedes usar console.log()
+*/
