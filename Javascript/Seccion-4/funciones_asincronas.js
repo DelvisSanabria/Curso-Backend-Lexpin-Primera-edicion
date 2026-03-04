@@ -42,57 +42,5 @@ function exampleTimer(){
       clearInterval(interval);
     }
     pause(1);
-    cronometro();
   }, 1000);
-}
-
-
-//Cronometro basico por consola
-
-function cronometro(){
-  console.log('Cronometro basico por consola');
-  //Creamos una variable para poder detener el cronometro
-  let increment;
-  //Creamos una variable para almacenar el tiempo y si esta corriendo el contador
-  let time = 0;
-  let isRunning = false;
-
-  console.log("controla el cronometro con los comandos 'start', 'stop', 'reset' y exit");
-
-  while(true){
-    const command = question("Comando: ");
-    if(command === 'start'){
-      if(!isRunning){
-        console.log("Cronometro iniciado");
-        isRunning = true;
-        increment = setInterval(() => {
-          time++;
-          //procces.stdout.write para mostrar el cronometro en la consola en la misma linea
-          console.log(`Tiempo: ${time} segundos`);
-        }, 1000)
-      }else {
-        console.log("Cronometro ya esta corriendo");
-      }
-    } else if (command === 'stop'){
-      if(isRunning){
-        console.log("Cronometro detenido");
-        isRunning = false;
-        clearInterval(increment);
-      }
-    } else if (command === 'reset'){
-      console.log("Cronometro reiniciado");
-      time = 0;
-      if(!isRunning){
-        console.log(`Tiempo: ${time} segundos`);
-      }
-    } else if (command === 'exit'){
-      if(isRunning){
-        console.log("Cronometro detenido");
-        clearInterval(increment);
-        break;
-      }
-    } else {
-      console.log("Comando no reconocido");
-    }
-  }
 }
