@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mi-web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - MONGO_URI=mongodb://mongodb-service:27017/mi-db
+    depends_on:
+      - mongodb-service
+
+  mongodb-service:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
