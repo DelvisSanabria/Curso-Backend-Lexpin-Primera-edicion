@@ -16,9 +16,11 @@ import express from 'express';
 import { CreateUserDto } from './dto/create-user.dto.js';
 import { ValidateUserPipe } from './pipes/validateuser/validateuser.pipe.js';
 import { AuthGuard } from './guards/auth/auth.guard.js';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 /* @UseGuards(AuthGuard) //aplicamos el guard de autenticación a todo el controlador para proteger todas las rutas */
 
+@ApiTags('users') // Etiqueta para Swagger, agrupa las rutas de este controlador bajo "users"
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
@@ -30,6 +32,7 @@ export class UsersController {
     return users;
   }
 
+  @ApiOperation({ summary: 'Crea un nuevo usuario' }) // Descripción de la operación para Swagger
   //para definir una ruta post usamos el decorador @Post
   @Post()
   @HttpCode(HttpStatus.CREATED) //para indicar que la respuesta de esta ruta debe tener el código de estado 201 (creado)
