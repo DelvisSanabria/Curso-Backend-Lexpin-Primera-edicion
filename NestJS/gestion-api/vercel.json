@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "name": "gestion-api",
   "buildCommand": "npm run vercel-build",
   "installCommand": "npm install",
   "framework": null,
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api/index.ts"
+      "destination": "/api/index.js"
     }
   ]
 }

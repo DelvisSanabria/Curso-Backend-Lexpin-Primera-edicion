@@ -5,8 +5,8 @@ node_modules
 coverage
 .nyc_output
 
-# Build output (not needed for serverless)
-dist
+# Build output - DO NOT IGNORE dist (needed for serverless functions)
+# dist
 
 # IDE
 .vscode
@@ -38,3 +38,6 @@ README.md
 
 # Old generated folder
 generated
+
+# Source api folder - use compiled version in dist instead
+api
