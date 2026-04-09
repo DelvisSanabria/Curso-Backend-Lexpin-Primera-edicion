@@ -29,9 +29,12 @@ npm-debug.log*
 .DS_Store
 *.pem
 
-# Prisma - keep schema but not migrations
-prisma/migrations
-
 # Documentation
 README.md
 *.md
+
+# Keep prisma/migrations for deployment
+# prisma/migrations
+
+# Old generated folder
+generated

@@ -1,17 +1,13 @@
 {
   "version": 2,
   "name": "gestion-api",
-  "builds": [
+  "buildCommand": "npx prisma generate && npm run build",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/api/index.ts"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.ts"
-    }
-  ],
-  "installCommand": "npm install"
+  ]
 }
