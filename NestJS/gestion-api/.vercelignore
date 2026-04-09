@@ -5,9 +5,6 @@ node_modules
 coverage
 .nyc_output
 
-# Build output - DO NOT IGNORE dist (needed for serverless functions)
-# dist
-
 # IDE
 .vscode
 .idea
@@ -39,5 +36,12 @@ README.md
 # Old generated folder
 generated
 
-# Source api folder - use compiled version in dist instead
-api
+# Ignore TypeScript source files in src folder
+# The api/ folder contains .js files for Vercel serverless
+src/*.ts
+src/*.ts.map
+src/**/*.ts
+src/**/*.ts.map
+test
+*.spec.ts
+*.spec.js
