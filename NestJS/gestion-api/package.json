@@ -8,7 +8,7 @@
   "type": "module",
 "scripts": {
     "build": "nest build",
-    "vercel-build": "prisma generate && nest build",
+    "vercel-build": "prisma generate && nest build && node -e \"const fs=require('fs');fs.mkdirSync('api/src',{recursive:true});fs.cpSync('dist/src','api/src',{recursive:true});\"",
     "postinstall": "npx prisma generate || true",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",

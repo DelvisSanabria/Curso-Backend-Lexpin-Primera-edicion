@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "npm run vercel-build",
+  "buildCommand": "npm run vercel-build && npm run copy-dist-to-api",
   "installCommand": "npm install",
   "framework": null,
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "rewrites": [
     {
       "source": "/(.*)",
