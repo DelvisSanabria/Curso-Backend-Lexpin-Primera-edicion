@@ -61,4 +61,14 @@ export class AuthService {
       access_token: this.jwtService.sign(payload),
     };
   }
+
+  verifyToken(token: string) {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return this.jwtService.verify(token);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      throw new UnauthorizedException('Token inválido');
+    }
+  }
 }

@@ -1,0 +1,14 @@
+import { IsString, MaxLength } from 'class-validator';
+
+export class CreateNoteDto {
+  @IsString()
+  @MaxLength(50)
+  title!: string;
+
+  @IsString()
+  @MaxLength(200)
+  content!: string;
+
+  @IsString()
+  userId!: string;
+}
